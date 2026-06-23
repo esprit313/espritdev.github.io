@@ -1,324 +1,689 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Alex Dev — Portfolio</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
- <link rel="stylesheet" href="./css/style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alex Dev — Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="glow-orb"></div>
+    <div class="glow-spark"></div>
 
-<div class="glow-orb"></div>
-<div class="glow-spark"></div>
+    <div class="wrap">
+      <header>
+        <nav>
+          <div class="logo"><span class="dot"></span>A</div>
+          <ul class="nav-links">
+            <li><a href="#apropos" data-nav-link>Accueil</a></li>
+            <li><a href="#projets" data-nav-link>Projets</a></li>
+            <li><a href="#competences" data-nav-link>Compétences</a></li>
+            <li><a href="#contact" data-nav-link>Contact</a></li>
+          </ul>
+          <a href="#contact" class="btn btn-outline-pill">
+            Me contacter
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <button
+            class="hamburger"
+            id="hamburger-btn"
+            aria-label="Ouvrir le menu"
+            aria-expanded="false"
+          >
+            <i class="fa-solid fa-bars" id="hamburger-icon"></i>
+          </button>
+        </nav>
+      </header>
 
-<div class="wrap">
-  <header>
-    <nav>
-      <div class="logo"><span class="dot"></span>A</div>
-      <ul class="nav-links">
-        <li><a href="#apropos" data-nav-link>Accueil</a></li>
-        <li><a href="#projets" data-nav-link>Projets</a></li>
-        <li><a href="#competences" data-nav-link>Compétences</a></li>
-        <li><a href="#contact" data-nav-link>Contact</a></li>
-      </ul>
-      <a href="#contact" class="btn btn-outline-pill">
-        Me contacter
-        <i class="fa-solid fa-arrow-right"></i>
-      </a>
-      <button class="hamburger" id="hamburger-btn" aria-label="Ouvrir le menu" aria-expanded="false">
-        <i class="fa-solid fa-bars" id="hamburger-icon"></i>
-      </button>
-    </nav>
-  </header>
-
-  <!-- ---------- menu rideau (mobile) ---------- -->
-  <div class="curtain" id="curtain">
-    <div class="curtain-panel">
-      <button class="curtain-close" id="curtain-close" aria-label="Fermer le menu">
-        <i class="fa-solid fa-xmark"></i>
-      </button>
-      <ul class="curtain-links">
-        <li><a href="#apropos" data-curtain-link><span class="num">01</span>Accueil</a></li>
-        <li><a href="#projets" data-curtain-link><span class="num">02</span>Projets</a></li>
-        <li><a href="#competences" data-curtain-link><span class="num">03</span>Compétences</a></li>
-        <li><a href="#contact" data-curtain-link><span class="num">04</span>Contact</a></li>
-      </ul>
-      <a href="#contact" class="btn btn-primary curtain-cta" data-curtain-link>
-        Me contacter
-        <i class="fa-solid fa-arrow-right"></i>
-      </a>
-      <div class="curtain-social">
-        <a href="https://github.com/ton-pseudo" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-        <a href="https://linkedin.com/in/ton-profil" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-        <a href="https://x.com/ton-pseudo" target="_blank" rel="noopener" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-      </div>
-    </div>
-  </div>
-
-  <section class="hero" id="apropos">
-    <div class="hero-text">
-      <span class="badge">Salut ! 👋</span>
-      <h1>Je transforme<br>des idées en<br><span class="accent">expériences web.</span></h1>
-      <p class="lead">Développeur junior passionné par le code propre, les interfaces modernes et les bonnes idées.</p>
-      <div class="hero-actions">
-        <a href="#projets" class="btn btn-primary">
-          Voir mes projets
-          <i class="fa-solid fa-arrow-up-right-from-square"></i>
-        </a>
-        <a href="#apropos" class="btn btn-ghost">
-          En savoir plus
-          <i class="fa-solid fa-arrow-down"></i>
-        </a>
-      </div>
-
-      <!-- 🔗 Remplace ces liens "#" par tes vrais profils -->
-      <div class="social-row">
-        <a href="https://github.com/ton-pseudo" target="_blank" rel="noopener" aria-label="GitHub">
-          <i class="fa-brands fa-github"></i>
-        </a>
-        <a href="https://linkedin.com/in/ton-profil" target="_blank" rel="noopener" aria-label="LinkedIn">
-          <i class="fa-brands fa-linkedin-in"></i>
-        </a>
-        <a href="https://x.com/ton-pseudo" target="_blank" rel="noopener" aria-label="X / Twitter">
-          <i class="fa-brands fa-x-twitter"></i>
-        </a>
-        <a href="https://instagram.com/ton-pseudo" target="_blank" rel="noopener" aria-label="Instagram">
-          <i class="fa-brands fa-instagram"></i>
-        </a>
-        <a href="tel:+221770000000" aria-label="Appeler">
-          <i class="fa-solid fa-phone"></i>
-        </a>
-      </div>
-    </div>
-
-    <div class="code-panel">
-      <div class="code-titlebar">
-        <div class="dots"><span></span><span></span><span></span></div>
-        <div class="lang-tag">JavaScript <span class="js-icon"><i class="fa-brands fa-square-js"></i></span></div>
-      </div>
-      <div class="code-body">
-<div class="code-line"><span class="ln">01</span><span class="plain"><span class="kw">const</span> developer = {</span></div>
-<div class="code-line"><span class="ln">02</span><span class="plain">&nbsp;&nbsp;<span class="prop">name</span>: <span class="str">'Alex Dev'</span>,</span></div>
-<div class="code-line"><span class="ln">03</span><span class="plain">&nbsp;&nbsp;<span class="prop">role</span>: <span class="str">'Junior Developer'</span>,</span></div>
-<div class="code-line"><span class="ln">04</span><span class="plain">&nbsp;&nbsp;<span class="prop">passion</span>: <span class="str">'Créer &amp; apprendre'</span>,</span></div>
-<div class="code-line"><span class="ln">05</span><span class="plain">&nbsp;&nbsp;<span class="prop">stack</span>: [<span class="str">'JavaScript'</span>, <span class="str">'React'</span>, <span class="str">'Node.js'</span>],</span></div>
-<div class="code-line"><span class="ln">06</span><span class="plain">&nbsp;&nbsp;<span class="fn">build</span>() {</span></div>
-<div class="code-line"><span class="ln">07</span><span class="plain">&nbsp;&nbsp;&nbsp;&nbsp;<span class="kw">return</span> <span class="str">'Des expériences web 🚀'</span></span></div>
-<div class="code-line"><span class="ln">08</span><span class="plain">&nbsp;&nbsp;}</span></div>
-<div class="code-line"><span class="ln">09</span><span class="plain">}</span></div>
-<div class="code-line"><span class="ln">10</span><span class="plain">&nbsp;</span></div>
-<div class="code-line"><span class="ln">11</span><span class="plain"><span class="kw">function</span> <span class="fn">codeWithPassion</span>() {</span></div>
-<div class="code-line"><span class="ln">12</span><span class="plain">&nbsp;&nbsp;<span class="kw">return</span> developer.<span class="fn">build</span>();</span></div>
-<div class="code-line"><span class="ln">13</span><span class="plain">}</span></div>
-      </div>
-      <div class="code-footer">
-        <span class="status-dot"></span> Disponible pour de nouveaux défis
-      </div>
-    </div>
-  </section>
-
-  <div class="scroll-cue">
-    <div class="mouse"><span></span></div>
-  </div>
-
-  <div class="tech-bar reveal" id="competences">
-    <span class="label">Tech stack</span>
-    <div class="tech-item"><span class="tech-icon icon-html"><i class="fa-brands fa-html5"></i></span>HTML</div>
-    <div class="tech-item"><span class="tech-icon icon-css"><i class="fa-brands fa-css3-alt"></i></span>CSS</div>
-    <div class="tech-item"><span class="tech-icon icon-js"><i class="fa-brands fa-js"></i></span>JavaScript</div>
-    <div class="tech-item"><span class="tech-icon icon-react"><i class="fa-brands fa-react"></i></span>React</div>
-    <div class="tech-item"><span class="tech-icon icon-node"><i class="fa-brands fa-node-js"></i></span>Node.js</div>
-    <div class="tech-item"><span class="tech-icon icon-git"><i class="fa-brands fa-git-alt"></i></span>Git</div>
-  </div>
-
-  <section id="projets">
-    <div class="section-head">
-      <div class="section-eyebrow"><span class="dot"></span>Projets récents</div>
-      <a href="#">Voir tous les projets
-        <i class="fa-solid fa-arrow-right"></i>
-      </a>
-    </div>
-
-    <div class="projects-grid reveal-stagger">
-      <div class="project-card stagger-item">
-        <div class="project-card-head">
-          <div>
-            <h3>TaskFlow</h3>
-            <div class="sub">Gestion de tâches</div>
-          </div>
-          <span class="pill pill-progress">En cours</span>
-        </div>
-        <div class="project-thumb">
-          <div class="mini-window">
-            <div class="mini-title"><i class="fa-solid fa-chart-simple"></i> Dashboard</div>
-            <div class="bar accent" style="width:70%"></div>
-            <div class="bar" style="width:45%"></div>
-            <div class="bar" style="width:85%"></div>
-            <div class="bar" style="width:30%"></div>
+      <!-- ---------- menu rideau (mobile) ---------- -->
+      <div class="curtain" id="curtain">
+        <div class="curtain-panel">
+          <button
+            class="curtain-close"
+            id="curtain-close"
+            aria-label="Fermer le menu"
+          >
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <ul class="curtain-links">
+            <li>
+              <a href="#apropos" data-curtain-link
+                ><span class="num">01</span>Accueil</a
+              >
+            </li>
+            <li>
+              <a href="#projets" data-curtain-link
+                ><span class="num">02</span>Projets</a
+              >
+            </li>
+            <li>
+              <a href="#competences" data-curtain-link
+                ><span class="num">03</span>Compétences</a
+              >
+            </li>
+            <li>
+              <a href="#contact" data-curtain-link
+                ><span class="num">04</span>Contact</a
+              >
+            </li>
+          </ul>
+          <a
+            href="#contact"
+            class="btn btn-primary curtain-cta"
+            data-curtain-link
+          >
+            Me contacter
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <div class="curtain-social">
+            <a
+              href="https://github.com/ton-pseudo"
+              target="_blank"
+              rel="noopener"
+              aria-label="GitHub"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+            <a
+              href="https://linkedin.com/in/ton-profil"
+              target="_blank"
+              rel="noopener"
+              aria-label="LinkedIn"
+              ><i class="fa-brands fa-linkedin-in"></i
+            ></a>
+            <a
+              href="https://x.com/ton-pseudo"
+              target="_blank"
+              rel="noopener"
+              aria-label="X / Twitter"
+              ><i class="fa-brands fa-x-twitter"></i
+            ></a>
           </div>
         </div>
       </div>
 
-      <div class="project-card stagger-item">
-        <div class="project-card-head">
-          <div>
-            <h3>Portfolio v2</h3>
-            <div class="sub">Mon portfolio personnel</div>
+      <section class="hero" id="apropos">
+        <div class="hero-text">
+          <span class="badge">Salut ! 👋</span>
+          <h1>
+            Je transforme<br />des idées en<br /><span class="accent"
+              >expériences web.</span
+            >
+          </h1>
+          <p class="lead">
+            Développeur junior passionné par le code propre, les interfaces
+            modernes et les bonnes idées.
+          </p>
+          <div class="hero-actions">
+            <a href="#projets" class="btn btn-primary">
+              Voir mes projets
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+            <a href="#apropos" class="btn btn-ghost">
+              En savoir plus
+              <i class="fa-solid fa-arrow-down"></i>
+            </a>
           </div>
-          <span class="pill pill-done">Terminé</span>
+
+          <!-- 🔗 Remplace ces liens "#" par tes vrais profils -->
+          <div class="social-row">
+            <a
+              href="https://github.com/ton-pseudo"
+              target="_blank"
+              rel="noopener"
+              aria-label="GitHub"
+            >
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a
+              href="https://linkedin.com/in/ton-profil"
+              target="_blank"
+              rel="noopener"
+              aria-label="LinkedIn"
+            >
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a
+              href="https://x.com/ton-pseudo"
+              target="_blank"
+              rel="noopener"
+              aria-label="X / Twitter"
+            >
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a
+              href="https://instagram.com/ton-pseudo"
+              target="_blank"
+              rel="noopener"
+              aria-label="Instagram"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="tel:+221770000000" aria-label="Appeler">
+              <i class="fa-solid fa-phone"></i>
+            </a>
+          </div>
         </div>
-        <div class="project-thumb">
-          <div class="mini-window">
-            <div class="mini-title"><i class="fa-solid fa-window-restore"></i> Alex Dev</div>
-            <div class="bar accent" style="width:60%"></div>
-            <div class="bar" style="width:80%"></div>
-            <div class="bar" style="width:40%"></div>
+
+        <div class="code-panel">
+          <div class="code-titlebar">
+            <div class="dots"><span></span><span></span><span></span></div>
+            <div class="lang-tag">
+              JavaScript
+              <span class="js-icon"
+                ><i class="fa-brands fa-square-js"></i
+              ></span>
+            </div>
           </div>
+          <div class="code-body">
+            <div class="code-line">
+              <span class="ln">01</span
+              ><span class="plain"
+                ><span class="kw">const</span> developer = {</span
+              >
+            </div>
+            <div class="code-line">
+              <span class="ln">02</span
+              ><span class="plain"
+                >&nbsp;&nbsp;<span class="prop">name</span>:
+                <span class="str">'Alex Dev'</span>,</span
+              >
+            </div>
+            <div class="code-line">
+              <span class="ln">03</span
+              ><span class="plain"
+                >&nbsp;&nbsp;<span class="prop">role</span>:
+                <span class="str">'Junior Developer'</span>,</span
+              >
+            </div>
+            <div class="code-line">
+              <span class="ln">04</span
+              ><span class="plain"
+                >&nbsp;&nbsp;<span class="prop">passion</span>:
+                <span class="str">'Créer &amp; apprendre'</span>,</span
+              >
+            </div>
+            <div class="code-line">
+              <span class="ln">05</span
+              ><span class="plain"
+                >&nbsp;&nbsp;<span class="prop">stack</span>: [<span class="str"
+                  >'JavaScript'</span
+                >, <span class="str">'React'</span>,
+                <span class="str">'Node.js'</span>],</span
+              >
+            </div>
+            <div class="code-line">
+              <span class="ln">06</span
+              ><span class="plain"
+                >&nbsp;&nbsp;<span class="fn">build</span>() {</span
+              >
+            </div>
+            <div class="code-line">
+              <span class="ln">07</span
+              ><span class="plain"
+                >&nbsp;&nbsp;&nbsp;&nbsp;<span class="kw">return</span>
+                <span class="str">'Des expériences web 🚀'</span></span
+              >
+            </div>
+            <div class="code-line">
+              <span class="ln">08</span><span class="plain">&nbsp;&nbsp;}</span>
+            </div>
+            <div class="code-line">
+              <span class="ln">09</span><span class="plain">}</span>
+            </div>
+            <div class="code-line">
+              <span class="ln">10</span><span class="plain">&nbsp;</span>
+            </div>
+            <div class="code-line">
+              <span class="ln">11</span
+              ><span class="plain"
+                ><span class="kw">function</span>
+                <span class="fn">codeWithPassion</span>() {</span
+              >
+            </div>
+            <div class="code-line">
+              <span class="ln">12</span
+              ><span class="plain"
+                >&nbsp;&nbsp;<span class="kw">return</span> developer.<span
+                  class="fn"
+                  >build</span
+                >();</span
+              >
+            </div>
+            <div class="code-line">
+              <span class="ln">13</span><span class="plain">}</span>
+            </div>
+          </div>
+          <div class="code-footer">
+            <span class="status-dot"></span> Disponible pour de nouveaux défis
+          </div>
+        </div>
+      </section>
+
+      <div class="scroll-cue">
+        <div class="mouse"><span></span></div>
+      </div>
+
+      <div class="tech-bar reveal" id="competences">
+        <span class="label">Tech stack</span>
+        <div class="tech-item">
+          <span class="tech-icon icon-html"
+            ><i class="fa-brands fa-html5"></i></span
+          >HTML
+        </div>
+        <div class="tech-item">
+          <span class="tech-icon icon-css"
+            ><i class="fa-brands fa-css3-alt"></i></span
+          >CSS
+        </div>
+        <div class="tech-item">
+          <span class="tech-icon icon-js"><i class="fa-brands fa-js"></i></span
+          >JavaScript
+        </div>
+        <div class="tech-item">
+          <span class="tech-icon icon-react"
+            ><i class="fa-brands fa-react"></i></span
+          >React
+        </div>
+        <div class="tech-item">
+          <span class="tech-icon icon-node"
+            ><i class="fa-brands fa-node-js"></i></span
+          >Node.js
+        </div>
+        <div class="tech-item">
+          <span class="tech-icon icon-git"
+            ><i class="fa-brands fa-git-alt"></i></span
+          >Git
         </div>
       </div>
 
-      <div class="project-card stagger-item">
-        <div class="project-card-head">
-          <div>
-            <h3>Weather App</h3>
-            <div class="sub">Météo en temps réel</div>
+      <section id="projets">
+        <div class="section-head">
+          <div class="section-eyebrow">
+            <span class="dot"></span>Projets récents
           </div>
-          <span class="pill pill-done">Terminé</span>
+          <a href="#"
+            >Voir tous les projets
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
         </div>
-        <div class="project-thumb">
-          <div class="weather-fill" style="padding:14px;">
-            <div class="sun-icon"></div>
-            <div class="temp">28°C</div>
-            <div class="loc">Dakar, SN</div>
+
+        <div class="projects-grid reveal-stagger">
+          <div class="project-card stagger-item">
+            <div class="project-card-head">
+              <div>
+                <h3>TaskFlow</h3>
+                <div class="sub">Gestion de tâches</div>
+              </div>
+              <span class="pill pill-progress">En cours</span>
+            </div>
+            <div class="project-thumb">
+              <div class="mini-window">
+                <div class="mini-title">
+                  <i class="fa-solid fa-chart-simple"></i> Dashboard
+                </div>
+                <div class="bar accent" style="width: 70%"></div>
+                <div class="bar" style="width: 45%"></div>
+                <div class="bar" style="width: 85%"></div>
+                <div class="bar" style="width: 30%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card stagger-item">
+            <div class="project-card-head">
+              <div>
+                <h3>Portfolio v2</h3>
+                <div class="sub">Mon portfolio personnel</div>
+              </div>
+              <span class="pill pill-done">Terminé</span>
+            </div>
+            <div class="project-thumb">
+              <div class="mini-window">
+                <div class="mini-title">
+                  <i class="fa-solid fa-window-restore"></i> Alex Dev
+                </div>
+                <div class="bar accent" style="width: 60%"></div>
+                <div class="bar" style="width: 80%"></div>
+                <div class="bar" style="width: 40%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card stagger-item">
+            <div class="project-card-head">
+              <div>
+                <h3>Weather App</h3>
+                <div class="sub">Météo en temps réel</div>
+              </div>
+              <span class="pill pill-done">Terminé</span>
+            </div>
+            <div class="project-thumb">
+              <div class="weather-fill" style="padding: 14px">
+                <div class="sun-icon"></div>
+                <div class="temp">28°C</div>
+                <div class="loc">Dakar, SN</div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
+      </section>
 
-  <section id="contact">
-    <div class="section-head">
-      <div class="section-eyebrow"><span class="dot"></span>Contact</div>
-    </div>
-
-    <div class="contact-grid reveal">
-      <div class="contact-info">
-        <h3>Travaillons ensemble 💜</h3>
-        <p class="desc">Une idée, un projet, une opportunité ? N'hésite pas à m'écrire, je réponds rapidement.</p>
-
-        <!-- ✏️ Remplace par ton vrai email et numéro -->
-        <a class="contact-link-row" href="mailto:ton-email@exemple.com">
-          <span class="ic"><i class="fa-solid fa-envelope"></i></span>
-          <span class="meta"><span class="label">Email</span>ton-email@exemple.com</span>
-        </a>
-        <a class="contact-link-row" href="tel:+221770000000">
-          <span class="ic"><i class="fa-solid fa-phone"></i></span>
-          <span class="meta"><span class="label">Téléphone</span>+221 77 000 00 00</span>
-        </a>
-        <a class="contact-link-row" href="https://maps.google.com/?q=Dakar,Senegal" target="_blank" rel="noopener">
-          <span class="ic"><i class="fa-solid fa-location-dot"></i></span>
-          <span class="meta"><span class="label">Localisation</span>Dakar, Sénégal</span>
-        </a>
-
-        <div class="social-row">
-          <a href="https://github.com/ton-pseudo" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-          <a href="https://linkedin.com/in/ton-profil" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-          <a href="https://x.com/ton-pseudo" target="_blank" rel="noopener" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-          <a href="https://instagram.com/ton-pseudo" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      <section id="contact">
+        <div class="section-head">
+          <div class="section-eyebrow"><span class="dot"></span>Contact</div>
         </div>
-      </div>
 
-      <div class="contact-form">
-        <!-- 🔧 Crée un compte gratuit sur https://formspree.io, crée un formulaire,
+        <div class="contact-grid reveal">
+          <div class="contact-info">
+            <h3>Travaillons ensemble 💜</h3>
+            <p class="desc">
+              Une idée, un projet, une opportunité ? N'hésite pas à m'écrire, je
+              réponds rapidement.
+            </p>
+
+            <!-- ✏️ Remplace par ton vrai email et numéro -->
+            <a class="contact-link-row" href="mailto:ton-email@exemple.com">
+              <span class="ic"><i class="fa-solid fa-envelope"></i></span>
+              <span class="meta"
+                ><span class="label">Email</span>ton-email@exemple.com</span
+              >
+            </a>
+            <a class="contact-link-row" href="tel:+221770000000">
+              <span class="ic"><i class="fa-solid fa-phone"></i></span>
+              <span class="meta"
+                ><span class="label">Téléphone</span>+221 77 000 00 00</span
+              >
+            </a>
+            <a
+              class="contact-link-row"
+              href="https://maps.google.com/?q=Dakar,Senegal"
+              target="_blank"
+              rel="noopener"
+            >
+              <span class="ic"><i class="fa-solid fa-location-dot"></i></span>
+              <span class="meta"
+                ><span class="label">Localisation</span>Dakar, Sénégal</span
+              >
+            </a>
+
+            <div class="social-row">
+              <a
+                href="https://github.com/ton-pseudo"
+                target="_blank"
+                rel="noopener"
+                aria-label="GitHub"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+              <a
+                href="https://linkedin.com/in/ton-profil"
+                target="_blank"
+                rel="noopener"
+                aria-label="LinkedIn"
+                ><i class="fa-brands fa-linkedin-in"></i
+              ></a>
+              <a
+                href="https://x.com/ton-pseudo"
+                target="_blank"
+                rel="noopener"
+                aria-label="X / Twitter"
+                ><i class="fa-brands fa-x-twitter"></i
+              ></a>
+              <a
+                href="https://instagram.com/ton-pseudo"
+                target="_blank"
+                rel="noopener"
+                aria-label="Instagram"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="contact-form">
+            <!-- 🔧 Crée un compte gratuit sur https://formspree.io, crée un formulaire,
              et remplace YOUR_FORM_ID ci-dessous par l'ID qu'il te donne.
              Les messages arriveront directement dans ta boîte email. -->
-        <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
-          <div class="row-2">
-            <div class="field" data-field="name">
-              <label for="f-name">Nom complet</label>
-              <input type="text" id="f-name" name="name" placeholder="Ton nom" required minlength="2">
-              <span class="field-error">Merci d'indiquer ton nom.</span>
-            </div>
-            <div class="field" data-field="email">
-              <label for="f-email">Email</label>
-              <input type="email" id="f-email" name="email" placeholder="toi@exemple.com" required>
-              <span class="field-error">Merci d'indiquer un email valide.</span>
-            </div>
-          </div>
-          <div class="field" data-field="subject">
-            <label for="f-subject">Sujet</label>
-            <input type="text" id="f-subject" name="subject" placeholder="Proposition de projet, collaboration..." required minlength="3">
-            <span class="field-error">Merci d'indiquer un sujet.</span>
-          </div>
-          <div class="field" data-field="message">
-            <label for="f-message">Message</label>
-            <textarea id="f-message" name="message" placeholder="Parle-moi de ton projet..." required minlength="10"></textarea>
-            <span class="field-error">Ton message doit contenir au moins 10 caractères.</span>
-          </div>
+            <form
+              id="contact-form"
+              action="https://formspree.io/f/YOUR_FORM_ID"
+              method="POST"
+              novalidate
+            >
+              <div class="row-2">
+                <div class="field" data-field="name">
+                  <label for="f-name">Nom complet</label>
+                  <input
+                    type="text"
+                    id="f-name"
+                    name="name"
+                    placeholder="Ton nom"
+                    required
+                    minlength="2"
+                  />
+                  <span class="field-error">Merci d'indiquer ton nom.</span>
+                </div>
+                <div class="field" data-field="email">
+                  <label for="f-email">Email</label>
+                  <input
+                    type="email"
+                    id="f-email"
+                    name="email"
+                    placeholder="toi@exemple.com"
+                    required
+                  />
+                  <span class="field-error"
+                    >Merci d'indiquer un email valide.</span
+                  >
+                </div>
+              </div>
+              <div class="field" data-field="subject">
+                <label for="f-subject">Sujet</label>
+                <input
+                  type="text"
+                  id="f-subject"
+                  name="subject"
+                  placeholder="Proposition de projet, collaboration..."
+                  required
+                  minlength="3"
+                />
+                <span class="field-error">Merci d'indiquer un sujet.</span>
+              </div>
+              <div class="field" data-field="message">
+                <label for="f-message">Message</label>
+                <textarea
+                  id="f-message"
+                  name="message"
+                  placeholder="Parle-moi de ton projet..."
+                  required
+                  minlength="10"
+                ></textarea>
+                <span class="field-error"
+                  >Ton message doit contenir au moins 10 caractères.</span
+                >
+              </div>
 
-          <!-- anti-spam honeypot -->
-          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+              <!-- anti-spam honeypot -->
+              <input
+                type="text"
+                name="_gotcha"
+                style="display: none"
+                tabindex="-1"
+                autocomplete="off"
+              />
 
-          <button type="submit" class="btn btn-primary submit-btn">
-            Envoyer le message
-            <i class="fa-solid fa-paper-plane"></i>
-          </button>
+              <button type="submit" class="btn btn-primary submit-btn">
+                Envoyer le message
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
 
-          <div id="form-status" class="form-status"></div>
-        </form>
+              <div id="form-status" class="form-status"></div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="marquee-section reveal">
+        <div class="marquee-head">
+          <div class="section-eyebrow">
+            <span class="dot"></span>Technologies
+          </div>
+          <h3>Les outils avec lesquels je travaille</h3>
+          <p>
+            Une stack moderne, pensée pour construire des produits rapides et
+            propres.
+          </p>
+        </div>
+      </section>
+
+      <div class="marquee-viewport">
+        <div class="marquee-track" id="marquee-track">
+          <div class="tech-chip">
+            <span class="tech-icon icon-html"
+              ><i class="fa-brands fa-html5"></i></span
+            >HTML5
+          </div>
+          <div class="tech-chip">
+            <span class="tech-icon icon-css"
+              ><i class="fa-brands fa-css3-alt"></i></span
+            >CSS3
+          </div>
+          <div class="tech-chip">
+            <span class="tech-icon icon-js"
+              ><i class="fa-brands fa-js"></i></span
+            >JavaScript
+          </div>
+          <div class="tech-chip">
+            <span class="tech-icon icon-react"
+              ><i class="fa-brands fa-react"></i></span
+            >React
+          </div>
+          <div class="tech-chip">
+            <span class="tech-icon icon-node"
+              ><i class="fa-brands fa-node-js"></i></span
+            >Node.js
+          </div>
+          <div class="tech-chip">
+            <span class="tech-icon icon-git"
+              ><i class="fa-brands fa-git-alt"></i></span
+            >Git &amp; GitHub
+          </div>
+          <div class="tech-chip">
+            <span
+              class="tech-icon"
+              style="background: rgba(56, 178, 172, 0.12); color: #38b2ac"
+              ><i class="fa-brands fa-css3"></i></span
+            >Tailwind CSS
+          </div>
+          <div class="tech-chip">
+            <span
+              class="tech-icon"
+              style="background: rgba(247, 127, 0, 0.12); color: #f77f00"
+              ><i class="fa-solid fa-fire-flame-curved"></i></span
+            >Firebase
+          </div>
+          <div class="tech-chip">
+            <span
+              class="tech-icon"
+              style="background: rgba(71, 154, 209, 0.12); color: #479ad1"
+              ><i class="fa-brands fa-python"></i></span
+            >Python
+          </div>
+          <div class="tech-chip">
+            <span
+              class="tech-icon"
+              style="background: rgba(255, 255, 255, 0.08); color: #fff"
+              ><i class="fa-brands fa-figma"></i></span
+            >Figma
+          </div>
+          <!-- dupliqué une 2e fois pour la boucle infinie -->
+          <div class="tech-chip">
+            <span class="tech-icon icon-html"
+              ><i class="fa-brands fa-html5"></i></span
+            >HTML5
+          </div>
+          <div class="tech-chip">
+            <span class="tech-icon icon-css"
+              ><i class="fa-brands fa-css3-alt"></i></span
+            >CSS3
+          </div>
+          <div class="tech-chip">
+            <span class="tech-icon icon-js"
+              ><i class="fa-brands fa-js"></i></span
+            >JavaScript
+          </div>
+          <div class="tech-chip">
+            <span class="tech-icon icon-react"
+              ><i class="fa-brands fa-react"></i></span
+            >React
+          </div>
+          <div class="tech-chip">
+            <span class="tech-icon icon-node"
+              ><i class="fa-brands fa-node-js"></i></span
+            >Node.js
+          </div>
+          <div class="tech-chip">
+            <span class="tech-icon icon-git"
+              ><i class="fa-brands fa-git-alt"></i></span
+            >Git &amp; GitHub
+          </div>
+          <div class="tech-chip">
+            <span
+              class="tech-icon"
+              style="background: rgba(56, 178, 172, 0.12); color: #38b2ac"
+              ><i class="fa-brands fa-css3"></i></span
+            >Tailwind CSS
+          </div>
+          <div class="tech-chip">
+            <span
+              class="tech-icon"
+              style="background: rgba(247, 127, 0, 0.12); color: #f77f00"
+              ><i class="fa-solid fa-fire-flame-curved"></i></span
+            >Firebase
+          </div>
+          <div class="tech-chip">
+            <span
+              class="tech-icon"
+              style="background: rgba(71, 154, 209, 0.12); color: #479ad1"
+              ><i class="fa-brands fa-python"></i></span
+            >Python
+          </div>
+          <div class="tech-chip">
+            <span
+              class="tech-icon"
+              style="background: rgba(255, 255, 255, 0.08); color: #fff"
+              ><i class="fa-brands fa-figma"></i></span
+            >Figma
+          </div>
+        </div>
       </div>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <span class="footer-rights"
+            >© 2026 Alex Dev. Tous droits réservés.</span
+          >
+          <a
+            class="signature"
+            href="https://esprit.dev"
+            target="_blank"
+            rel="noopener"
+          >
+            <span class="made">Créé avec 💜 par</span>
+            <strong>Esprit.dev</strong>
+          </a>
+        </div>
+      </footer>
     </div>
-  </section>
 
-  <section class="marquee-section reveal">
-    <div class="marquee-head">
-      <div class="section-eyebrow"><span class="dot"></span>Technologies</div>
-      <h3>Les outils avec lesquels je travaille</h3>
-      <p>Une stack moderne, pensée pour construire des produits rapides et propres.</p>
-    </div>
-  </section>
-
-  <div class="marquee-viewport">
-    <div class="marquee-track" id="marquee-track">
-      <div class="tech-chip"><span class="tech-icon icon-html"><i class="fa-brands fa-html5"></i></span>HTML5</div>
-      <div class="tech-chip"><span class="tech-icon icon-css"><i class="fa-brands fa-css3-alt"></i></span>CSS3</div>
-      <div class="tech-chip"><span class="tech-icon icon-js"><i class="fa-brands fa-js"></i></span>JavaScript</div>
-      <div class="tech-chip"><span class="tech-icon icon-react"><i class="fa-brands fa-react"></i></span>React</div>
-      <div class="tech-chip"><span class="tech-icon icon-node"><i class="fa-brands fa-node-js"></i></span>Node.js</div>
-      <div class="tech-chip"><span class="tech-icon icon-git"><i class="fa-brands fa-git-alt"></i></span>Git &amp; GitHub</div>
-      <div class="tech-chip"><span class="tech-icon" style="background:rgba(56,178,172,0.12);color:#38b2ac;"><i class="fa-brands fa-css3"></i></span>Tailwind CSS</div>
-      <div class="tech-chip"><span class="tech-icon" style="background:rgba(247,127,0,0.12);color:#f77f00;"><i class="fa-solid fa-fire-flame-curved"></i></span>Firebase</div>
-      <div class="tech-chip"><span class="tech-icon" style="background:rgba(71,154,209,0.12);color:#479ad1;"><i class="fa-brands fa-python"></i></span>Python</div>
-      <div class="tech-chip"><span class="tech-icon" style="background:rgba(255,255,255,0.08);color:#fff;"><i class="fa-brands fa-figma"></i></span>Figma</div>
-      <!-- dupliqué une 2e fois pour la boucle infinie -->
-      <div class="tech-chip"><span class="tech-icon icon-html"><i class="fa-brands fa-html5"></i></span>HTML5</div>
-      <div class="tech-chip"><span class="tech-icon icon-css"><i class="fa-brands fa-css3-alt"></i></span>CSS3</div>
-      <div class="tech-chip"><span class="tech-icon icon-js"><i class="fa-brands fa-js"></i></span>JavaScript</div>
-      <div class="tech-chip"><span class="tech-icon icon-react"><i class="fa-brands fa-react"></i></span>React</div>
-      <div class="tech-chip"><span class="tech-icon icon-node"><i class="fa-brands fa-node-js"></i></span>Node.js</div>
-      <div class="tech-chip"><span class="tech-icon icon-git"><i class="fa-brands fa-git-alt"></i></span>Git &amp; GitHub</div>
-      <div class="tech-chip"><span class="tech-icon" style="background:rgba(56,178,172,0.12);color:#38b2ac;"><i class="fa-brands fa-css3"></i></span>Tailwind CSS</div>
-      <div class="tech-chip"><span class="tech-icon" style="background:rgba(247,127,0,0.12);color:#f77f00;"><i class="fa-solid fa-fire-flame-curved"></i></span>Firebase</div>
-      <div class="tech-chip"><span class="tech-icon" style="background:rgba(71,154,209,0.12);color:#479ad1;"><i class="fa-brands fa-python"></i></span>Python</div>
-      <div class="tech-chip"><span class="tech-icon" style="background:rgba(255,255,255,0.08);color:#fff;"><i class="fa-brands fa-figma"></i></span>Figma</div>
-    </div>
-  </div>
-
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <span class="footer-rights">© 2026 Alex Dev. Tous droits réservés.</span>
-      <a class="signature" href="https://esprit.dev" target="_blank" rel="noopener">
-        <span class="made">Créé avec 💜 par</span> <strong>Esprit.dev</strong>
-      </a>
-    </div>
-  </footer>
-</div>
-
- <script src="./js/main.js"></script>
-
-</body>
+    <script src="./js/main.js"></script>
+  </body>
 </html>
