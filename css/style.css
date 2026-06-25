@@ -67,22 +67,23 @@ body {
   z-index: 1;
 }
 
-.wrap {
+/* .wrap {
   max-width: 1180px;
   margin: 0 auto;
   padding: 0 32px;
   position: relative;
   z-index: 2;
-}
+} */
 
 /* ---------- nav ---------- */
 header {
   position: fixed;
   top: 0;
+  width: 100%;
   left: 0;
   right: 0;
   z-index: 150;
-  padding: 22px 0;
+  padding: 22px 8%;
   background: transparent;
   border-bottom: 1px solid transparent;
   transition:
@@ -98,7 +99,7 @@ header.scrolled {
   -webkit-backdrop-filter: blur(18px) saturate(140%);
   border-bottom: 1px solid var(--panel-border);
   box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.5);
-  padding: 16px 0;
+  padding: 16px 8%;
 }
 /* compense le header désormais fixe pour que le contenu ne soit pas masqué */
 body {
@@ -180,7 +181,7 @@ nav {
 
 /* ---------- hero ---------- */
 .hero {
-  padding: 90px 0 70px;
+  padding: 0 8%;
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
   gap: 50px;
